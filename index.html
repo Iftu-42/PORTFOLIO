@@ -3,59 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iftu Chala | Software Engineer & Creator</title>
+    <title>Iftu Chala | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="theme-nav">
-        <div class="theme-buttons">
-            <button onclick="setTheme('olive')" class="t-btn olive" title="Earthly Olive"></button>
-            <button onclick="setTheme('cosmic')" class="t-btn cosmic" title="Deep Space"></button>
-            <button onclick="setTheme('minimal')" class="t-btn minimal" title="Stardust Cream"></button>
-            <button onclick="setTheme('creative')" class="t-btn creative" title="Nebula Gradient"></button>
-        </div>
+        <button onclick="setTheme('olive')" class="t-btn olive" title="Olive Earth"></button>
+        <button onclick="setTheme('cosmic')" class="t-btn cosmic" title="Deep Space"></button>
+        <button onclick="setTheme('minimal')" class="t-btn minimal" title="Warm Stardust"></button>
+        <button onclick="setTheme('creative')" class="t-btn creative" title="Nebula Mode"></button>
     </nav>
 
     <header class="hero">
-        <div class="hero-container">
-            <div class="image-wrapper">
-                <img src="iftu.jpg" alt="Iftu Chala" class="profile-img">
-                <div class="orb"></div>
-            </div>
-            <div class="hero-text">
-                <h1 class="reveal-text">Iftu Chala</h1>
-                <p class="tagline">Content Creator [cite: 15] • Designer  • Data Science Enthusiast</p>
-                <p class="bio-intro">Blending software engineering logic  with creative storytelling[cite: 15, 33].</p>
-            </div>
+        <div class="image-wrapper">
+            <img src="your-photo.jpg" alt="Iftu Chala" class="profile-img">
+            <div class="orb"></div>
+        </div>
+        <div class="hero-text">
+            <span class="tagline">Content Creator • Designer • Data Enthusiast</span>
+            <h1>IFTU<br>CHALA</h1>
+            <p>Software Engineering student at ASTU[cite: 2, 28]. I weave technical logic with creative storytelling to build digital experiences that matter[cite: 10].</p>
         </div>
     </header>
 
-    <section id="roles" class="multi-identity">
-        <div class="role-tabs">
-            <button class="tab-link active" onclick="openRole(event, 'Creator')">Creator</button>
-            <button class="tab-link" onclick="openRole(event, 'Designer')">Designer</button>
-            <button class="tab-link" onclick="openRole(event, 'Tutor')">Tutor</button>
-            <button class="tab-link" onclick="openRole(event, 'Data')">Enthusiast</button>
-        </div>
-
-        <div id="Creator" class="tab-content show">
-            <h3>Content Creator @ CSEC ASTU [cite: 13, 15]</h3>
-            <p>I transform complex tech concepts into engaging visual narratives[cite: 10, 33].</p>
-        </div>
-        </section>
-
-    <section class="certificates">
-        <h2>The Vault</h2>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <span>C++ Proficiency</span>
-                <a href="cpp-cert.pdf" download class="dl-link">Download PDF</a>
+    <section class="section">
+        <h2>Multi-Role Identity</h2>
+        <div class="tab-container">
+            <div class="tab-header">
+                <button class="tab-link active" onclick="openRole(event, 'Creator')">Creator</button>
+                <button class="tab-link" onclick="openRole(event, 'Designer')">Designer</button>
+                <button class="tab-link" onclick="openRole(event, 'Coach')">Coach</button>
+                <button class="tab-link" onclick="openRole(event, 'Engineer')">Engineer</button>
             </div>
-            <div class="cert-card">
-                <span>IELTS Coaching Cert [cite: 20]</span>
-                <a href="ielts-cert.pdf" download class="dl-link">Download PDF</a>
+            
+            <div id="Creator" class="tab-content active">
+                <h3>Content Creator @ CSEC ASTU</h3>
+                <p>Specializing in creative content creation and public speaking to communicate innovation[cite: 15, 33].</p>
+            </div>
+            <div id="Designer" class="tab-content">
+                <h3>Graphic Designer</h3>
+                <p>Focusing on stylish, modern visual identities and front-end development[cite: 33].</p>
+            </div>
+            <div id="Coach" class="tab-content">
+                <h3>IELTS Coach & Tutor</h3>
+                <p>Experienced IELTS Coach and C++ Tutor at Adama Science and Technology University[cite: 20, 23].</p>
+            </div>
+            <div id="Engineer" class="tab-content">
+                <h3>Software Engineer (In-Progress)</h3>
+                <p>Pursuing a Bachelor of Software Engineering with proficiency in C++ and Python[cite: 27, 33].</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section vault">
+        <h2>The Vault</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Professional CV</h3>
+                <p>A detailed look at my academic journey and technical skill set.</p>
+                <a href="iftu_chala_cv.pdf" download class="btn-dl">Download CV</a>
+            </div>
+            <div class="card">
+                <h3>Certifications</h3>
+                <p>Academic transcripts and professional training certificates.</p>
+                <a href="#" class="btn-dl">Download PDF</a>
             </div>
         </div>
     </section>
