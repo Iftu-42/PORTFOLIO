@@ -1,0 +1,72 @@
+:root {
+    --transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 1. Olive & Cream (Earth) */
+[data-theme="olive"] {
+    --bg: #F5F2E8;
+    --text: #3D4035;
+    --accent: #808B73;
+    --gold: #C5A059;
+    --card: rgba(128, 139, 115, 0.1);
+}
+
+/* 2. Dark Cosmic (Astronomy) */
+[data-theme="cosmic"] {
+    --bg: #0B0E14;
+    --text: #ECECEC;
+    --accent: #6C5CE7;
+    --gold: #F1C40F;
+    --card: rgba(255, 255, 255, 0.05);
+}
+
+/* 3. Soft Minimal (Stardust) */
+[data-theme="minimal"] {
+    --bg: #FFFBF5;
+    --text: #5D5C58;
+    --accent: #D4A373;
+    --gold: #B8860B;
+    --card: #FFFFFF;
+}
+
+/* 4. Creative Expressive (Nebula) */
+[data-theme="creative"] {
+    --bg: #1a1a2e;
+    --text: #ffffff;
+    --accent: #ff007f;
+    --gold: #00d4ff;
+    --card: linear-gradient(135deg, rgba(255,0,127,0.1), rgba(0,212,255,0.1));
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--gold);
+    filter: grayscale(20%);
+    transition: var(--transition);
+}
+
+/* Theme buttons styling */
+.t-btn {
+    width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; cursor: pointer;
+}
+.olive { background: #808B73; }
+.cosmic { background: #0B0E14; }
+.minimal { background: #F5F2E8; }
+.creative { background: #ff007f; }
