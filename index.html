@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="olive">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iftu Chala | Software Engineer & Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="theme-nav">
+        <div class="theme-buttons">
+            <button onclick="setTheme('olive')" class="t-btn olive" title="Earthly Olive"></button>
+            <button onclick="setTheme('cosmic')" class="t-btn cosmic" title="Deep Space"></button>
+            <button onclick="setTheme('minimal')" class="t-btn minimal" title="Stardust Cream"></button>
+            <button onclick="setTheme('creative')" class="t-btn creative" title="Nebula Gradient"></button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <div class="image-wrapper">
+                <img src="your-photo.jpg" alt="Iftu Chala" class="profile-img">
+                <div class="orb"></div>
+            </div>
+            <div class="hero-text">
+                <h1 class="reveal-text">Iftu Chala</h1>
+                <p class="tagline">Content Creator [cite: 15] • Designer  • Data Science Enthusiast</p>
+                <p class="bio-intro">Blending software engineering logic  with creative storytelling[cite: 15, 33].</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="roles" class="multi-identity">
+        <div class="role-tabs">
+            <button class="tab-link active" onclick="openRole(event, 'Creator')">Creator</button>
+            <button class="tab-link" onclick="openRole(event, 'Designer')">Designer</button>
+            <button class="tab-link" onclick="openRole(event, 'Tutor')">Tutor</button>
+            <button class="tab-link" onclick="openRole(event, 'Data')">Enthusiast</button>
+        </div>
+
+        <div id="Creator" class="tab-content show">
+            <h3>Content Creator @ CSEC ASTU [cite: 13, 15]</h3>
+            <p>I transform complex tech concepts into engaging visual narratives[cite: 10, 33].</p>
+        </div>
+        </section>
+
+    <section class="certificates">
+        <h2>The Vault</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <span>C++ Proficiency</span>
+                <a href="cpp-cert.pdf" download class="dl-link">Download PDF</a>
+            </div>
+            <div class="cert-card">
+                <span>IELTS Coaching Cert [cite: 20]</span>
+                <a href="ielts-cert.pdf" download class="dl-link">Download PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
