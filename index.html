@@ -1,78 +1,196 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="olive">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iftu Chala | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Student Portfolio</title>
+
+    <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <nav class="theme-nav">
-        <button onclick="setTheme('olive')" class="t-btn olive" title="Olive Earth"></button>
-        <button onclick="setTheme('cosmic')" class="t-btn cosmic" title="Deep Space"></button>
-        <button onclick="setTheme('minimal')" class="t-btn minimal" title="Warm Stardust"></button>
-        <button onclick="setTheme('creative')" class="t-btn creative" title="Nebula Mode"></button>
+<!-- ================= NAVBAR ================= -->
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo">MyPortfolio</h2>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
     </nav>
+</header>
 
-    <header class="hero">
-        <div class="image-wrapper">
-            <img src="iftu.jpg" alt="Iftu Chala" class="profile-img">
-            <div class="orb"></div>
-        </div>
-        <div class="hero-text">
-            <span class="tagline">Content Creator • Designer • Data Enthusiast</span>
-            <h1>IFTU<br>CHALA</h1>
-            <p>Software Engineering student at ASTU[cite: 2, 28]. I weave technical logic with creative storytelling to build digital experiences that matter[cite: 10].</p>
-        </div>
-    </header>
 
-    <section class="section">
-        <h2>Multi-Role Identity</h2>
-        <div class="tab-container">
-            <div class="tab-header">
-                <button class="tab-link active" onclick="openRole(event, 'Creator')">Creator</button>
-                <button class="tab-link" onclick="openRole(event, 'Designer')">Designer</button>
-                <button class="tab-link" onclick="openRole(event, 'Coach')">Coach</button>
-                <button class="tab-link" onclick="openRole(event, 'Engineer')">Engineer</button>
-            </div>
-            
-            <div id="Creator" class="tab-content active">
-                <h3>Content Creator @ CSEC ASTU</h3>
-                <p>Specializing in creative content creation and public speaking to communicate innovation[cite: 15, 33].</p>
-            </div>
-            <div id="Designer" class="tab-content">
-                <h3>Graphic Designer</h3>
-                <p>Focusing on stylish, modern visual identities and front-end development[cite: 33].</p>
-            </div>
-            <div id="Coach" class="tab-content">
-                <h3>IELTS Coach & Tutor</h3>
-                <p>Experienced IELTS Coach and C++ Tutor at Adama Science and Technology University[cite: 20, 23].</p>
-            </div>
-            <div id="Engineer" class="tab-content">
-                <h3>Software Engineer (In-Progress)</h3>
-                <p>Pursuing a Bachelor of Software Engineering with proficiency in C++ and Python[cite: 27, 33].</p>
-            </div>
-        </div>
-    </section>
+<!-- ================= HERO SECTION ================= -->
 
-    <section class="section vault">
-        <h2>The Vault</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Professional CV</h3>
-                <p>A detailed look at my academic journey and technical skill set.</p>
-                <a href="iftu_chala_cv.pdf" download class="btn-dl">Download CV</a>
-            </div>
-            <div class="card">
-                <h3>Certifications</h3>
-                <p>Academic transcripts and professional training certificates.</p>
-                <a href="#" class="btn-dl">Download PDF</a>
-            </div>
-        </div>
-    </section>
+<section id="hero" class="hero">
 
-    <script src="script.js"></script>
+    <h1>Your Full Name</h1>
+
+    <h3>Student | Aspiring Professional</h3>
+
+    <p>
+        Passionate about technology, design, and solving real-world problems.
+    </p>
+
+    <a href="#projects" class="btn">View My Projects</a>
+
+</section>
+
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section id="about" class="about">
+
+    <h2>About Me</h2>
+
+    <div class="about-container">
+
+        <!-- Profile Image Placeholder -->
+        <img src="https://via.placeholder.com/200" alt="Profile Image">
+
+        <p>
+            Hello! I'm a student studying <strong>Your Department</strong>
+            at <strong>Your University</strong>. I am interested in building
+            creative solutions and learning new technologies.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS SECTION ================= -->
+
+<section id="skills" class="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>HTML</h3>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS</h3>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill-card">
+            <h3>Python</h3>
+        </div>
+
+        <div class="skill-card">
+            <h3>Figma</h3>
+        </div>
+
+        <div class="skill-card">
+            <h3>AutoCAD</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS SECTION ================= -->
+
+<section id="projects" class="projects">
+
+    <h2>Projects</h2>
+
+    <div class="project-container">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+
+            <img src="https://via.placeholder.com/300" alt="project">
+
+            <h3>Project One</h3>
+
+            <p>Short description of the project.</p>
+
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+
+        </div>
+
+
+        <!-- Project 2 -->
+        <div class="project-card">
+
+            <img src="https://via.placeholder.com/300" alt="project">
+
+            <h3>Project Two</h3>
+
+            <p>Short description of the project.</p>
+
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+
+        </div>
+
+
+        <!-- Project 3 -->
+        <div class="project-card">
+
+            <img src="https://via.placeholder.com/300" alt="project">
+
+            <h3>Project Three</h3>
+
+            <p>Short description of the project.</p>
+
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT SECTION ================= -->
+
+<section id="contact" class="contact">
+
+    <h2>Contact</h2>
+
+    <p>Email: your@email.com</p>
+    <p>GitHub: github.com/yourusername</p>
+    <p>LinkedIn: linkedin.com/in/yourname</p>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>© 2026 Your Name | Student Portfolio</p>
+
+</footer>
+
+
+<!-- Link JS -->
+<script src="script.js"></script>
+
 </body>
 </html>
