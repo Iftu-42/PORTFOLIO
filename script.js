@@ -1,48 +1,69 @@
-// 1. Theme Engine
-function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('user-theme', theme);
-    
-    // UI Feedback for buttons
-    document.querySelectorAll('.t-btn').forEach(btn => {
-        btn.style.transform = btn.classList.contains(theme) ? 'scale(1.2)' : 'scale(1)';
-        btn.style.borderWidth = btn.classList.contains(theme) ? '3px' : '1px';
+// ==========================
+// MOBILE MENU TOGGLE
+// ==========================
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("show");
+
+});
+
+
+
+// ==========================
+// SMOOTH SCROLL
+// ==========================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
     });
-}
 
-// Initialize Theme
-const savedTheme = localStorage.getItem('user-theme') || 'olive';
-setTheme(savedTheme);
+});
 
-// 2. Tab Engine for Roles
-function openRole(evt, roleName) {
-    // Hide all tab content
-    const contents = document.querySelectorAll('.tab-content');
-    contents.forEach(content => content.classList.remove('active'));
 
-    // Deactivate all tab links
-    const links = document.querySelectorAll('.tab-link');
-    links.forEach(link => link.classList.remove('active'));
 
-    // Show current tab and set button as active
-    document.getElementById(roleName).classList.add('active');
-    evt.currentTarget.classList.add('active');
-}
+// ==========================
+// SCROLL ANIMATION
+// ==========================
 
-// 3. Reveal on Scroll Animation
-const observerOptions = { threshold: 0.1 };
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+
+    const trigger = window.innerHeight * 0.8;
+
+    sections.forEach(section => {
+
+        const top = section.getBoundingClientRect().top;
+
+        if(top < trigger){
+            section.style.opacity = "1";
+            section.style.transform = "translateY(0)";
         }
-    });
-}, observerOptions);
 
-document.querySelectorAll('.card, .section h2').forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    el.style.transition = "all 0.8s ease-out";
-    observer.observe(el);
+    });
+
+});
+
+
+
+// Initial style
+sections.forEach(section => {
+
+    section.style.opacity = "0";
+    section.style.transform = "translateY(50px)";
+    section.style.transition = "all 0.6s ease";
+
 });
