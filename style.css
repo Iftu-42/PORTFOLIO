@@ -1,81 +1,192 @@
-/* --- Global Reset & Variables --- */
-:root {
-    --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+/* ===== GENERAL STYLING ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-[data-theme="olive"] {
-    --bg: #F5F2E8; --text: #3D4035; --accent: #808B73; --gold: #C5A059; --card-bg: #FFFFFF; --shadow: rgba(61, 64, 53, 0.1);
-}
-[data-theme="cosmic"] {
-    --bg: #0B0E14; --text: #ECECEC; --accent: #6C5CE7; --gold: #F1C40F; --card-bg: #161B22; --shadow: rgba(0, 0, 0, 0.5);
-}
-[data-theme="minimal"] {
-    --bg: #FFFBF5; --text: #5D5C58; --accent: #D4A373; --gold: #B8860B; --card-bg: #FFFFFF; --shadow: rgba(0, 0, 0, 0.05);
-}
-[data-theme="creative"] {
-    --bg: #1a1a2e; --text: #ffffff; --accent: #ff007f; --gold: #00d4ff; --card-bg: rgba(255, 255, 255, 0.1); --shadow: rgba(255, 0, 127, 0.2);
+body{
+    line-height:1.6;
+    background:#ffffff;
 }
 
-body {
-    background-color: var(--bg); color: var(--text);
-    font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; transition: var(--transition);
+/* ===== NAVBAR ===== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#6c63ff;
+    color:white;
 }
 
-/* --- Navigation --- */
-.theme-nav {
-    position: fixed; top: 25px; left: 50%; transform: translateX(-50%);
-    display: flex; gap: 15px; padding: 12px 25px;
-    background: var(--card-bg); border-radius: 50px; z-index: 1000; box-shadow: 0 10px 30px var(--shadow);
-}
-.t-btn { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--text); cursor: pointer; transition: 0.3s; }
-.t-btn.olive { background: #808B73; } .t-btn.cosmic { background: #0B0E14; } .t-btn.minimal { background: #F5F2E8; } .t-btn.creative { background: #ff007f; }
-
-/* --- Hero Section --- */
-.hero {
-    display: flex; align-items: center; min-height: 100vh; padding: 0 10%; gap: 60px;
-}
-.image-wrapper { position: relative; flex: 1; display: flex; justify-content: center; }
-.profile-img {
-    width: 380px; height: 500px; object-fit: cover; border-radius: 200px 200px 20px 20px;
-    border: 3px solid var(--gold); z-index: 2; position: relative;
-}
-.orb {
-    position: absolute; width: 420px; height: 420px; border-radius: 50%;
-    background: var(--accent); filter: blur(80px); opacity: 0.2; z-index: 1; top: 50px;
-}
-.hero-text { flex: 1.2; }
-.hero-text h1 { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 10vw, 6rem); line-height: 0.85; margin: 0; text-transform: uppercase; }
-.tagline { font-size: 1rem; letter-spacing: 4px; color: var(--accent); font-weight: 600; margin-bottom: 20px; display: block; }
-
-/* --- Sections & Grid --- */
-.section { padding: 100px 10%; }
-.section h2 { font-family: 'Syne', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 60px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-.card {
-    background: var(--card-bg); padding: 50px; border-radius: 24px; box-shadow: 0 20px 40px var(--shadow);
-    transition: var(--transition); border: 1px solid transparent;
-}
-.card:hover { transform: translateY(-10px); border-color: var(--gold); }
-
-/* --- Tabs --- */
-.tab-header { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; }
-.tab-link {
-    background: none; border: 1px solid var(--accent); color: var(--text);
-    padding: 10px 25px; border-radius: 50px; cursor: pointer; font-weight: 600; transition: 0.3s;
-}
-.tab-link.active { background: var(--accent); color: var(--bg); }
-.tab-content { display: none; text-align: center; max-width: 800px; margin: 0 auto; animation: fadeIn 0.5s; }
-.tab-content.active { display: block; }
-
-/* --- Buttons --- */
-.btn-dl {
-    display: inline-block; padding: 14px 30px; background: var(--text); color: var(--bg);
-    text-decoration: none; border-radius: 50px; font-weight: 600; margin-top: 20px;
+.nav-links{
+    display:flex;
+    list-style:none;
 }
 
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.nav-links li{
+    margin-left:20px;
+}
 
-@media (max-width: 968px) {
-    .hero { flex-direction: column; text-align: center; padding-top: 150px; }
-    .profile-img { width: 280px; height: 380px; }
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:#f5f3ff;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero h3{
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#6c63ff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#4e47d4;
+}
+
+/* ===== ABOUT ===== */
+
+.about{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.about-container{
+    max-width:700px;
+    margin:auto;
+}
+
+.about img{
+    margin:20px 0;
+    border-radius:50%;
+}
+
+/* ===== SKILLS ===== */
+
+.skills{
+    padding:60px 20px;
+    background:#f5f3ff;
+    text-align:center;
+}
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    padding:20px;
+    width:120px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===== PROJECTS ===== */
+
+.projects{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.project-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.project-card{
+    width:300px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-card img{
+    width:100%;
+    border-radius:5px;
+}
+
+.project-card a{
+    display:inline-block;
+    margin:10px 5px;
+    color:#6c63ff;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* ===== CONTACT ===== */
+
+.contact{
+    padding:60px 20px;
+    background:#f5f3ff;
+    text-align:center;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:#6c63ff;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        background:#6c63ff;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:200px;
+        padding:20px;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
 }
