@@ -1,195 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zuhal Portfolio</title>
 
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
+<!-- FONT + ICONS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- 🌸 SVG BACKGROUND -->
+<div class="floral-bg">
+    <svg viewBox="0 0 800 600">
+        <path d="M0,300 Q200,100 400,300 T800,300 V600 H0 Z"/>
+    </svg>
+</div>
 
-<header>
-    <nav class="navbar">
-        <h2 class="logo">MyPortfolio</h2>
+<!-- 🌿 NAVBAR -->
+<nav class="navbar">
+    <h2>Zuhal</h2>
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <ul id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-        <!-- Mobile Menu Button -->
-        <div class="menu-toggle" id="menuToggle">
-            ☰
-        </div>
-    </nav>
-</header>
+    <div id="menuToggle">☰</div>
+</nav>
 
-
-<!-- ================= HERO SECTION ================= -->
-
+<!-- 🌿 HERO -->
 <section id="hero" class="hero">
 
-    <h1>Your Full Name</h1>
+<div class="hero-content">
 
-    <h3>Student | Aspiring Professional</h3>
+<div>
+<h1>Zuhal</h1>
+<h3>Aspiring Developer & Creative Professional</h3>
 
-    <p>
-        Passionate about technology, design, and solving real-world problems.
-    </p>
+<p>
+I combine technology, creativity, and communication to build meaningful digital experiences.
+</p>
 
-    <a href="#projects" class="btn">View My Projects</a>
+<a href="#projects" class="btn">View Projects</a>
+<a href="cv.pdf" download class="btn secondary-btn">Download CV</a>
+</div>
+
+<img src="your-image.jpg">
+
+</div>
+</section>
+
+<!-- 🌿 ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+
+<p>
+I am a multi-skilled student passionate about technology, design, and communication. 
+From coding to content creation, I enjoy building impactful solutions and helping people learn and grow.
+</p>
+</section>
+
+<!-- 🌿 SKILLS (CATEGORIES) -->
+<section id="skills">
+<h2>My Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-box">💻 Web Developer</div>
+<div class="skill-box">📊 Beginner Data Scientist</div>
+<div class="skill-box">🎓 IELTS Coach</div>
+<div class="skill-box">🎨 Graphic Designer</div>
+<div class="skill-box">📱 Content Creator</div>
+<div class="skill-box">📚 Experienced Tutor</div>
+
+</div>
 
 </section>
 
+<!-- 🌿 LANGUAGES -->
+<section id="languages">
+<h2>Languages</h2>
 
-<!-- ================= ABOUT SECTION ================= -->
-
-<section id="about" class="about">
-
-    <h2>About Me</h2>
-
-    <div class="about-container">
-
-        <!-- Profile Image Placeholder -->
-        <img src="https://via.placeholder.com/200" alt="Profile Image">
-
-        <p>
-            Hello! I'm a student studying <strong>Your Department</strong>
-            at <strong>Your University</strong>. I am interested in building
-            creative solutions and learning new technologies.
-        </p>
-
-    </div>
+<div class="language-grid">
+<div class="lang">English – Fluent</div>
+<div class="lang">Amharic – Fluent</div>
+<div class="lang">Afan Oromo – Fluent</div>
+<div class="lang">Spanish – Beginner</div>
+</div>
 
 </section>
 
+<!-- 🌿 EXPERIENCE -->
+<section id="experience">
+<h2>Experience</h2>
 
-<!-- ================= SKILLS SECTION ================= -->
+<div class="experience-container">
 
-<section id="skills" class="skills">
+<div class="exp-card">
+<h3>Creative Designer</h3>
+<p>LinkedIn Award</p>
+</div>
 
-    <h2>Skills</h2>
+<div class="exp-card">
+<h3>Social Media Manager</h3>
+<p>CSEC ASTU</p>
+</div>
 
-    <div class="skills-container">
+<div class="exp-card">
+<h3>Private Personal Assistant</h3>
+<p>Professional Experience</p>
+</div>
 
-        <div class="skill-card">
-            <h3>HTML</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>CSS</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>JavaScript</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>Python</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>Figma</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>AutoCAD</h3>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
+<!-- 🌿 PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
 
-<!-- ================= PROJECTS SECTION ================= -->
+<div class="project-container">
 
-<section id="projects" class="projects">
+<div class="project-card">
+<img src="project1.jpg">
+<h3>Project One</h3>
+<p>Short description of your project.</p>
+</div>
 
-    <h2>Projects</h2>
+<div class="project-card">
+<img src="project2.jpg">
+<h3>Project Two</h3>
+<p>Short description of your project.</p>
+</div>
 
-    <div class="project-container">
+<div class="project-card">
+<img src="project3.jpg">
+<h3>Project Three</h3>
+<p>Short description of your project.</p>
+</div>
 
-        <!-- Project 1 -->
-        <div class="project-card">
-
-            <img src="https://via.placeholder.com/300" alt="project">
-
-            <h3>Project One</h3>
-
-            <p>Short description of the project.</p>
-
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
-
-        </div>
-
-
-        <!-- Project 2 -->
-        <div class="project-card">
-
-            <img src="https://via.placeholder.com/300" alt="project">
-
-            <h3>Project Two</h3>
-
-            <p>Short description of the project.</p>
-
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
-
-        </div>
-
-
-        <!-- Project 3 -->
-        <div class="project-card">
-
-            <img src="https://via.placeholder.com/300" alt="project">
-
-            <h3>Project Three</h3>
-
-            <p>Short description of the project.</p>
-
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
+<!-- 🌿 CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
 
-<!-- ================= CONTACT SECTION ================= -->
-
-<section id="contact" class="contact">
-
-    <h2>Contact</h2>
-
-    <p>Email: your@email.com</p>
-    <p>GitHub: github.com/yourusername</p>
-    <p>LinkedIn: linkedin.com/in/yourname</p>
+<p><i class="fa-solid fa-envelope"></i> your@email.com</p>
+<p><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+<p><i class="fa-brands fa-tiktok"></i> TikTok</p>
 
 </section>
 
-
-<!-- ================= FOOTER ================= -->
-
+<!-- 🌿 FOOTER -->
 <footer>
+<p>© 2026 Zuhal</p>
 
-    <p>© 2026 Your Name | Student Portfolio</p>
+<div class="social-icons">
+<a href="#"><i class="fa-solid fa-envelope"></i></a>
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-brands fa-tiktok"></i></a>
+</div>
 
 </footer>
 
-
-<!-- Link JS -->
 <script src="script.js"></script>
 
 </body>
